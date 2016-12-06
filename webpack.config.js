@@ -29,14 +29,14 @@ module.exports = {
 	},
 
 	externals: {
-		"jquery": "jQuery",
 		"$": "$",
 		_: "underscore"
 	},
 
 	devServer: {
 		inline: true,
-		hot: true
+		hot: true,
+		headers: { 'Access-Control-Allow-Origin': '*' }
 	},
 
 	module: {

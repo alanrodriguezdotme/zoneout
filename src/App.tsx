@@ -4,14 +4,12 @@ import { Router, Route, hashHistory } from 'react-router';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
 
-import Dashboard from './components/Dashboard/Dashboard';
-import SubPage from './components/SubPage/SubPage';
+import Main from './components/Main/Main';
 
 render(
 	(
 		<Router history={hashHistory}>
-			<Route path="/" component={Dashboard}/>
-			<Route path="/subpage" component={SubPage}/>
+			<Route path="/" component={Main}/>
 		</Router>
 	),
 	document.getElementById("app")
