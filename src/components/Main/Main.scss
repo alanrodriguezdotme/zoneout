@@ -1,6 +1,14 @@
+$font-worksans: 'Work Sans', sans-serif;
+$font-light: 200;
+$font-regular: 400;
+$font-bold: 700;
+
 * {
 	box-sizing: border-box;
 	border: 0;
+	font-family: $font-worksans;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -8,11 +16,31 @@ body {
 	padding: 0;
 	background: black;
 	color: white;
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	font-weight: $font-regular;
+	margin: 0 0 40px 0;
+	background: #ffd89b; /* fallback for old browsers */
+	background: -webkit-linear-gradient(#ffd89b , #19547b); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(#ffd89b , #19547b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+        
+}
+
+.app {
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
 }
 
 .main {
-	width: 100vw;
-	margin: 0 auto;
+	width: 100%;
 	text-align: center;
 }
 
@@ -20,7 +48,6 @@ body {
 	display: flex;
 	align-items: center;
 	width: 100%;
-	height: 100%;
 }
 
 .player {
@@ -34,7 +61,13 @@ body {
 .prev, .next {
 	cursor: pointer;
 
-	&:hover {
-		background: red;
+	.arrow {	
+		fill: #19547b;
+		transition: fill 400ms;
+		transition-timing-function: ease-in-out;
+
+		&:hover {
+			fill: #ffd89b;
+		}
 	}
 }
